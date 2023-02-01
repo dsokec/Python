@@ -8,9 +8,16 @@ print(student_scores)
 #Write your code below this row 👇
 # bez upotrebe funkcija Max i Min
 
-maxScore = student_scores[0]
+
+
+# druga opcija je:
+# minScore = 0
 
 # minScore = student_scores[0]
+
+# ovo je najbolja solucija:
+# maxScore = 0
+maxScore = student_scores[0]
 for score in student_scores:
     if maxScore < score:
         maxScore = score
