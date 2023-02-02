@@ -15,9 +15,13 @@ def preskoci_zid():
     move()
     turn_left()
 
-preskoci_zid()
-preskoci_zid()
-preskoci_zid()
-preskoci_zid()
-preskoci_zid()
-preskoci_zid()
+def idi_do_cilja():
+    preskoci_zid()
+    preskoci_zid()
+    preskoci_zid()
+    preskoci_zid()
+    preskoci_zid()
+    preskoci_zid()
+
+# Pozovem rad samo jedne funkcije 'idi_do_cilja()'
+idi_do_cilja()
