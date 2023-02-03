@@ -1,8 +1,3 @@
-def turn_right():
-    turn_left()
-    turn_left()
-    turn_left()
-
 # The Functions
 # move()
 # turn_left()
@@ -11,6 +6,11 @@ def turn_right():
 # front_is_clear()
 # wall_in_front()
 # at_goal()
+
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
 
 def preskoci_zid_ispred_sebe():
     turn_left()
