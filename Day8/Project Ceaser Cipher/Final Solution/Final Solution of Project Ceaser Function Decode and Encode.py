@@ -42,6 +42,7 @@ while shouldContinue:
   text = input("Type your message:\n").lower()
 
   # Provjera je li upisan integer value
+  # Više o tome na https://stackoverflow.com/questions/23294658/asking-the-user-for-input-until-they-give-a-valid-response
   while True:
     try:
       shift = int(input("Type the shift number:\n"))
