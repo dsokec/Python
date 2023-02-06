@@ -30,9 +30,27 @@ while shouldContinue:
   clear()
   print(logo)
 
-  direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower() 
+  # Provjera je li upisana ključna riječ 'encode' ili 'decode'
+  while True:
+    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
+    if direction not in ("encode","decode"):
+      print("\nPlease type a correct keyword.\n")
+      continue
+    else:
+      break
+    
   text = input("Type your message:\n").lower()
-  shift = int(input("Type the shift number:\n"))
+
+  # Provjera je li upisan integer value
+  while True:
+    try:
+      shift = int(input("Type the shift number:\n"))
+    except ValueError:
+      print("\nPlease type an integer value.\n")
+      continue
+    else:
+      break
+      
   
   # shift = shift % 26
   # tada se briše 26 u retku 'newPosition = (position + shiftAmount) % 26'
@@ -40,7 +58,16 @@ while shouldContinue:
   # Calling the ceaser function
   ceaser(startText = text, shiftAmount = shift, cipherDirection = direction)
 
-  result = input("\nType 'yes' if you want to go again. Otherwise type 'no'.\n").lower()
-  if result == "no":
-    shouldContinue = False
-    print("\nGoodbye !")
+  # Provjera je li ispravno upisana riječ 'yes' ili 'no'
+  while True:
+    result = input("\nType 'yes' if you want to go again. Otherwise type 'no'.\n").lower()
+    if result == "no":
+      shouldContinue = False
+      print("\nGoodbye !")
+      break
+    elif result == "yes":
+      shouldContinue = True
+      break
+    else:
+      print("\nPlease type a correct word!")
+      continue
