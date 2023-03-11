@@ -18,11 +18,15 @@ def checkAnswer(guess, answer, turns):
 
 # Make function to set difficulty
 def setDifficulty():
-    level = input("Choose a difficulty. Type 'easy' or 'hard': ")
-    if level == "easy":
-        return EASY_LEVEL_TURNS
-    else:
-        return HARD_LEVEL_TURNS
+    while True:
+        level = input("Choose a difficulty. Type 'easy' or 'hard': ")
+        if level == "easy":
+            return EASY_LEVEL_TURNS
+        elif level == "hard":
+            return HARD_LEVEL_TURNS
+        else:
+            print("Please, type a correct keyword!")
+            continue
 
 def game():
     # Choosing a random number between 1 and 100.
@@ -40,7 +44,13 @@ def game():
     while guess != answer:
         # Let the user guess a number.
         print(f"\nYou have {turns} attempts remaining to guess the number.")
-        guess = int(input("Make a guess: "))
+        while True:
+            try:
+                guess = int(input("Make a guess: "))
+                break
+            except ValueError:
+                print("Please, type a number.\n")
+                continue
 
         turns = checkAnswer(guess, answer, turns)
     # Track the number of turns and reduce by 1 if they get it wrong.
