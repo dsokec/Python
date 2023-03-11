@@ -1,5 +1,7 @@
 # Use a Debugger
 # https://pythontutor.com/visualize.html#mode=edit
+
+# ask StackOverflow for help https://stackoverflow.com/questions/tagged/python
 def mutate(a_list):
   b_list = []
   for item in a_list:
