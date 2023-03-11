@@ -1,7 +1,4 @@
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-
-
-
 # Funkcija Ceaser
 def ceaser(startText, shiftAmount, cipherDirection):
   endText = ""
@@ -9,7 +6,6 @@ def ceaser(startText, shiftAmount, cipherDirection):
   # shiftAmount će biti negativan, pozitivan, negativan, pozitivan, ...
   if cipherDirection == "decode":
       shiftAmount *= -1
-    
   for char in startText:
     # provjera je li znak zapravo u abecedi
     if char in alphabet:
@@ -21,7 +17,6 @@ def ceaser(startText, shiftAmount, cipherDirection):
       endText += char
   print(f"The {cipherDirection}d text is {endText}")
 # --------------------------------------------------
-
 from replit import clear
 from art import logo
 
@@ -29,7 +24,6 @@ shouldContinue = True
 while shouldContinue:
   clear()
   print(logo)
-
   # Provjera je li upisana ključna riječ 'encode' ili 'decode'
   while True:
     direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
@@ -51,14 +45,10 @@ while shouldContinue:
       continue
     else:
       break
-      
-  
   # shift = shift % 26
   # tada se briše 26 u retku 'newPosition = (position + shiftAmount) % 26'
-  
   # Calling the ceaser function
   ceaser(startText = text, shiftAmount = shift, cipherDirection = direction)
-
   # Provjera je li ispravno upisana riječ 'yes' ili 'no'
   while True:
     result = input("\nType 'yes' if you want to go again. Otherwise type 'no'.\n").lower()
