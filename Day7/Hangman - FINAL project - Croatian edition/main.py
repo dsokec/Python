@@ -1,8 +1,6 @@
 from hangman_art import logo
 from hangman_word_list import word_list
 from replit import clear
-
-
 import random
 
 # Nasumicna rijec
