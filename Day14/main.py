@@ -1,7 +1,16 @@
 from art import logo
+from game_data import data
+import random
+
 # 1. Display art
 print(logo)
+
 # 2. Generate a random account name from the list
+account_a = random.choice(data)
+account_b = random.choice(data)
+
+if account_a == account_b:
+  account_b = random.choice(data)
 
 # 3. Format the account data into printable format
 
