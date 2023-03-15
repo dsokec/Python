@@ -1,5 +1,6 @@
+from art import logo
 # 1. Display art
-
+print(logo)
 # 2. Generate a random account name from the list
 
 # 3. Format the account data into printable format
@@ -19,7 +20,5 @@
 # 9. Making account at position B become the next account at position A
 
 # 10. Clear the screen between rounds.
-
-
 
 
